@@ -64,7 +64,7 @@ body {
     }
 
     button {
-        box-shadow: 1px 3px 6px 0px rgb(59, 34, 59);
+      box-shadow: 1px 3px 6px 0px rgb(59, 34, 59);
 
       cursor: pointer;
 
@@ -86,10 +86,10 @@ body {
     }
 
     button:hover {
-        background-color: $Soft-Magenta;
-        color: #fff;
-        
-        transition: .3s;
+      background-color: $Soft-Magenta;
+      color: #fff;
+
+      transition: 0.3s;
     }
   }
 
@@ -115,11 +115,10 @@ body {
     }
 
     a:hover {
-        color: $Soft-Magenta;
-        border: 1px solid $Soft-Magenta;
-        transition: .5s;
+      color: $Soft-Magenta;
+      border: 1px solid $Soft-Magenta;
+      transition: 0.5s;
     }
-
   }
 }
 
@@ -137,34 +136,75 @@ body {
 
     .flex-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       flex-basis: 90%;
-      
+
       .img-section {
-        flex-basis: 50%;
+        .img-mockup {
+          max-width: 650px;
+        }
       }
 
       .info-section {
-        flex-basis: 50%;
+        padding: 0rem 6rem;
       }
-
     }
-
   }
-
 }
 
-
-
 @media screen and (min-width: 970px) {
-
   body {
     background-image: url("../images/bg-desktop.svg");
     background-size: cover;
   }
+  .container {
+    .flex-container {
+      flex-direction: row;
 
-  
+      .img-section {
+        flex-basis: 50%;
+
+        .img-mockup {
+          max-width: 100%;
+        }
+      }
+
+      .info-section {
+        flex-basis: 50%;
+        padding: 2rem;
+
+        .title {
+          font-size: 1.8rem;
+        }
+
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+
+    .flex-container {
+
+      .info-section {
+        padding: 0 5rem;
+
+        .title {
+          font-size: 2rem;
+        }
+        
+        .description {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -174,38 +214,48 @@ body {
 
   .container {
     padding: 3rem 5rem;
-    
-    .logo {
-        max-width: 200px;
-    }
 
-    header {
-        margin-bottom: 4rem;
+    .logo {
+      max-width: 200px;
     }
 
     .flex-container {
-        
-        gap: 2rem;
+      flex-basis: 70%;
 
-        .img-section {
-            flex-basis: 50%;
+      .img-section {
+        flex-basis: 50%;
+        align-self: flex-end;
+      }
+
+      .info-section {
+        flex-basis: 50%;
+        text-align: justify;
+        align-self: flex-start;
+        padding: 5rem 10rem 0 5rem;
+
+        .title {
+          font-size: 3rem;
+          padding-right: 5rem;
         }
 
-        .info-section {
-            flex-basis: 50%;
-            text-align: justify;
-            align-self: flex-start;
-            padding-right: 4rem;
-
-            .title {
-                font-size: 3rem;
-            }
+        p {
+          margin: 1rem 0;
+          font-size: 1.2rem;
         }
+
+        button {
+          width: 225px;
+          height: 50px;
+          font-size: 1rem;
+          border-radius: 50px;
+        }
+      }
     }
 
-    .social {
+    footer {
+      .social {
         justify-content: flex-end;
+      }
     }
-
-}
+  }
 }

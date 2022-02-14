@@ -100,21 +100,53 @@ body {
   }
   .container .flex-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 90%;
   }
-  .container .flex-container .img-section {
-    flex-basis: 50%;
+  .container .flex-container .img-section .img-mockup {
+    max-width: 650px;
   }
   .container .flex-container .info-section {
-    flex-basis: 50%;
+    padding: 0rem 6rem;
   }
 }
 @media screen and (min-width: 970px) {
   body {
     background-image: url("../images/bg-desktop.svg");
     background-size: cover;
+  }
+
+  .container .flex-container {
+    flex-direction: row;
+  }
+  .container .flex-container .img-section {
+    flex-basis: 50%;
+  }
+  .container .flex-container .img-section .img-mockup {
+    max-width: 100%;
+  }
+  .container .flex-container .info-section {
+    flex-basis: 50%;
+    padding: 2rem;
+  }
+  .container .flex-container .info-section .title {
+    font-size: 1.8rem;
+  }
+  .container .flex-container .info-section p {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .flex-container .info-section {
+    padding: 0 5rem;
+  }
+  .container .flex-container .info-section .title {
+    font-size: 2rem;
+  }
+  .container .flex-container .info-section .description {
+    font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -128,25 +160,34 @@ body {
   .container .logo {
     max-width: 200px;
   }
-  .container header {
-    margin-bottom: 4rem;
-  }
   .container .flex-container {
-    gap: 2rem;
+    flex-basis: 70%;
   }
   .container .flex-container .img-section {
     flex-basis: 50%;
+    align-self: flex-end;
   }
   .container .flex-container .info-section {
     flex-basis: 50%;
     text-align: justify;
     align-self: flex-start;
-    padding-right: 4rem;
+    padding: 5rem 10rem 0 5rem;
   }
   .container .flex-container .info-section .title {
     font-size: 3rem;
+    padding-right: 5rem;
   }
-  .container .social {
+  .container .flex-container .info-section p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  .container .flex-container .info-section button {
+    width: 225px;
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 50px;
+  }
+  .container footer .social {
     justify-content: flex-end;
   }
 }

@@ -1,0 +1,211 @@
+// Sass variables
+
+$Violet: hsl(257, 40%, 49%);
+$Soft-Magenta: hsl(300, 69%, 71%);
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: $Violet;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  padding: 2rem 2.8rem;
+
+  .logo {
+    width: 100%;
+    max-width: 150px;
+
+    margin-bottom: 4rem;
+  }
+
+  .img-mockup {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .info-section {
+    text-align: center;
+
+    .title {
+      margin: 0;
+
+      color: #fff;
+
+      line-height: 1.5;
+
+      font-size: 1.7rem;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .description {
+      color: rgba(255, 255, 255, 0.678);
+
+      margin: 1rem;
+
+      line-height: 1.5;
+
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+    }
+
+    button {
+        box-shadow: 1px 3px 6px 0px rgb(59, 34, 59);
+
+      cursor: pointer;
+
+      margin-bottom: 4.5rem;
+
+      text-align: center;
+
+      width: 200px;
+      height: 40px;
+
+      font-family: "Poppins", sans-serif;
+      font-size: 13px;
+
+      background-color: #fff;
+      color: $Violet;
+
+      border: none;
+      border-radius: 20px;
+    }
+
+    button:hover {
+        background-color: $Soft-Magenta;
+        color: #fff;
+        
+        transition: .3s;
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    font-size: 20px;
+
+    a {
+      width: 2.5rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      border-radius: 20px;
+      padding: 8px;
+    }
+
+    a:hover {
+        color: $Soft-Magenta;
+        border: 1px solid $Soft-Magenta;
+        transition: .5s;
+    }
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+    background-size: contain;
+  }
+
+  .container {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 90%;
+      
+      .img-section {
+        flex-basis: 50%;
+      }
+
+      .info-section {
+        flex-basis: 50%;
+      }
+
+    }
+
+  }
+
+}
+
+
+
+@media screen and (min-width: 970px) {
+
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+  }
+
+  
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    background-size: contain;
+  }
+
+  .container {
+    padding: 3rem 5rem;
+    
+    .logo {
+        max-width: 200px;
+    }
+
+    header {
+        margin-bottom: 4rem;
+    }
+
+    .flex-container {
+        
+        gap: 2rem;
+
+        .img-section {
+            flex-basis: 50%;
+        }
+
+        .info-section {
+            flex-basis: 50%;
+            text-align: justify;
+            align-self: flex-start;
+            padding-right: 4rem;
+
+            .title {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .social {
+        justify-content: flex-end;
+    }
+
+}
+}
